@@ -1,1 +1,8 @@
-<h1>inde page</h1>
+<% @post.each do |post| %>
+
+	    <div class="post_wrapper">
+            <h2 class="title"><%= link_to post.title, post %></h2>
+            <h6><%= time_ago_in_words post.created_at %> ago </h6>
+            <%= truncate post.body %> <br>
+      </div>
+<% end %>
