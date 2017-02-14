@@ -1,0 +1,15 @@
+    <h1>New Post</h1>
+
+    <%= form_for :posts, url: posts_path do |f| %>
+       <div class="form-group">
+            <%= f.label :title %>
+            <%= f.text_field :title, class: "form-control" %>
+        </div>
+        <div class="form-group">
+            <%= f.label :text %>
+            <%= f.text_area :body, class: "form-control", :rows=>12, :cols=>40 %>
+        </div>
+        <div class="form-group">
+            <%= f.submit class: "btn btn-s" %>
+        </div>
+    <% end %>
