@@ -7,11 +7,20 @@
     <hr>
   </p>
   <div class="paper">
-  <p class="three-col">
+    <p class="three-col">
     <%= @post.body %>
-  </p>
+    </p>
   </div>
-  <br>
+    <br>
   <%= link_to 'Edit', edit_post_path(@post) %> |
   <%= link_to 'Back', posts_path %> |
   <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
+  
+  <div id="comments">
+    <h2><%= @post.comments.count %> Comments</h2>
+    <%= render(partial: 'comments/comments', collection: @post.comments) %>
+    
+    <h3>Add a comment:</h3>
+    <%= render "comments/form" %>
+  </div>
+</div>

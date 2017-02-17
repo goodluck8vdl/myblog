@@ -2,13 +2,51 @@
 <html>
 <head>
   <title>Workspace</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+	<div id="sidebar">
+		<div id="logo">
+			<%= link_to root_path do %>
+				<%= image_tag("photo.jpg", class: "img-responsive") %>
+			<% end %>
+		</div>
+		<ul>
+			<li class="category">Website</li>
+			<li><%= link_to "Home", root_path %></li>
+			<li><%= link_to "About", about_path %></li>
+			<li><%= link_to "Contact", contact_path %></li>
+		</ul>
+		<ul>
+			<li class="category">Social</li>
+			<li><a href="https://www.instagram.com/babiichuk_inna/?hl=en">Instagram</a></li>
+			<li><a href="https://www.facebook.com/inna.babiichuk">Facebook</a></li>
+		</ul>
+	</div>
+	<div id="main_content">
+		<div id="header">
+			<% if current_page?(root_path) %>
+				<p>All Posts</p> |
+			<%= link_to 'New Post', new_post_path %>
+			<% elsif current_page?(about_path) %>
+				<p>About</p>
+			<% elsif current_page?(contact_path) %>
+				<p>Contact</p>
+			<% else %>
+				<%= link_to "Back to All Posts", root_path %>
+			<% end %>
+			
+		</div>
+		<% flash.each do |name, msg| %>
+			<%= content_tag(:div, msg, class: "alert") %>
+		<% end %>
+		<%= yield %>
+	</div>
 
 </body>
 </html>
