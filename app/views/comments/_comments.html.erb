@@ -2,7 +2,7 @@
     <div class="comment_content">
         <p class="comments_name"><strong><%= comments.name %></strong></p>
         <p class="comments_body"><%= comments.body %></p>
-        <p class="comments_time"><%= time_ago_in_words(comments.created_at) %> Ago </p>
+        <p class="comments_time"><%= time_ago_in_words(comments.created_at) %> ago </p>
     </div>
     <p><%= link_to 'Delete', [comments.post, comments], method: :delete, class: "button", data: {confirm: 'Are you sure?'} %> </p>
 </div>
