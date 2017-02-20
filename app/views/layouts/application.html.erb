@@ -20,7 +20,6 @@
 			<li class="category">Website</li>
 			<li><%= link_to "Home", root_path %></li>
 			<li><%= link_to "About", about_path %></li>
-			<li><%= link_to "Contact", contact_path %></li>
 		</ul>
 		<ul>
 			<li class="category">Social</li>
@@ -35,8 +34,6 @@
 			<%= link_to 'New Post', new_post_path %>
 			<% elsif current_page?(about_path) %>
 				<p>About</p>
-			<% elsif current_page?(contact_path) %>
-				<p>Contact</p>
 			<% else %>
 				<%= link_to "Back to All Posts", root_path %>
 			<% end %>

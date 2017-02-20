@@ -2,9 +2,8 @@
     <div class="col-md-6 col-xs-6">
         <% @post.each do |post| %>
 	        <div class="post_wrapper">
-                <h2 class="title"><%= link_to post.title, post %></h2>
-                <h6><%= time_ago_in_words post.created_at %> ago </h6>
-                <%= truncate post.body %> <br>
+                <h2 class="title"><%= link_to post.title, post %></h2> <br>
+                <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p> 
             </div>
         <% end %>
     </div> <!-- end col -->
