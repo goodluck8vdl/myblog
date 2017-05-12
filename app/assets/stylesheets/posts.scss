@@ -73,11 +73,11 @@ h4 {
 	padding: 7em 0 0 0;
 	border-right: 1px solid #d6dce0;
 	#logo {
-		width: 6vw;
+		width: 5vw;
 		position: absolute;
-		right: 4vw;
+		right: 2.5vw;
 		top: 1.5vw;
-		left: 4.5vw;
+		left: 5vw;
 	}
 	ul {
 		list-style: none;
@@ -110,16 +110,15 @@ h4 {
   color: grey;
   text-align: center;
   background-color: #f5f7f9;
-  padding-top: 5px;
-  padding-bottom: 0px;
+  padding-top: 0.5vw;
   border-top: 1px solid #d6dce0;
   margin-left: 13vw;
 }
 
 #main_content {
-	margin-left: 14.1vw;
+	margin-left: 13vw;
 	#header {
-		padding: 1em 3em;
+		padding: 0.7vw 2.5vw;
 		border-bottom: 1px solid #d6dce0;
 		background: #f5f7f9;
 		color: #9eafba;
@@ -133,7 +132,7 @@ h4 {
 		
 	}
 	.post_wrapper {
-		padding: 3em;
+		padding: 3vw;
 		border-bottom: 1px solid #d6dce0;
 		.title {
 			margin: 0;
@@ -141,7 +140,7 @@ h4 {
 				font-weight: 500;
 				text-decoration: none;
 				color: black;
-				font-size: 1.5em;
+				font-size: 4vw;
 				&:hover {
 				color: #33acb7;
 				}
@@ -160,7 +159,7 @@ h4 {
 		}
 		.body {
 			font-size: 1.1em;
-			line-height: 1.75;
+			line-height: 3.75;
 		}
 		.date_and_author {
 			color: #9eafba;
@@ -189,7 +188,7 @@ h4 {
 					float: left;
 					.comment_name {
 						margin: 1em 0 0 0;
-						font-size: 0.7em;
+						font-size: 5.7em;
 						text-transform: uppercase;
 					}
 					.comment_body {
@@ -226,7 +225,7 @@ h4 {
 				font-weight: 500;
 			}
 			p {
-				font-size: 1.1em;
+				font-size: 1.1vw;
 				line-height: 1.75;
 			}
 			a {
@@ -240,7 +239,8 @@ h4 {
 		margin: 2em 0;
 	}
 	input[type="text"], input[type="email"], input[type="password"], textarea {
-		width: 90%;
+		max-width: 90vw;
+		
 		border: 1px solid #d6dce0;
 		border-radius: .35em;
 		margin-top: 10px;
@@ -255,21 +255,42 @@ h4 {
 	}
 	input[type="submit"] {
 		outline: none;
+		
 		background: transparent;
 		border: 1px solid #d6dce0;
 		padding: .5em 1.5em;
-		font-size: 1.1em;
+		font-size: 1.2vw;
 		border-radius: 1.5em;
-		margin-left: .5em;
+		margin-left: 30vw;
+		margin-right: 30vw;
+		margin-bottom: 5vw;
 		&:hover {
 			border: 1px solid #33acb7;
 			color: #33acb7;
 		}
 	}
 }
+#main_content #post_content #comments input[type="text"], #main_content #post_content #comments textarea {
+    width: 50vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+label {
+	margin-left: 10vw;
+	font-size: 1.3vw;
+}
+#main_content #post_content #comments h3 {
+    margin-top: 2em;
+    text-align: center;
+    font-size: 2.5vw;
+    font-weight: 600;
+}
+h2 {
+	font-size: 2.5vw;
+}
 #carousel-example-generic {
 	margin-top: 3%;
-	width: 520px;
+	width: 42vw;
     margin-left: -2.2%;
     margin-right: -2.2%;
 }
