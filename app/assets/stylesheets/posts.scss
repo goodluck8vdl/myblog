@@ -289,10 +289,9 @@ h2 {
 	font-size: 2.5vw;
 }
 #carousel-example-generic {
-	margin-top: 3%;
+	margin-top: 5%;
 	width: 42vw;
-    margin-left: -2.2%;
-    margin-right: -2.2%;
+    margin-left: 2vw;
 }
 
 @media (max-width: 768px) {
@@ -304,7 +303,12 @@ h2 {
 	margin-top: 3%;
 	width: 70vw;
     margin-left: 10%;
-    
+	}
+	h2 {
+		text-align: center;
+	}
+	.date {
+		text-align: center;
 	}
 }
 @media (max-width: 414px) {
@@ -313,11 +317,17 @@ h2 {
 		line-height: 0.5;
 	
 	}
+	h2 {
+		text-align: center;
+	}
+	.date {
+		text-align: center;
+	}
 	body {
 		line-height: 0.6;
 	}
 	#carousel-example-generic {
-	margin-top: 3%;
+	margin-top: 12%;
 	width: 70vw;
     margin-left: 10%;
 	}
@@ -327,6 +337,13 @@ h2 {
 		.paper {
   
   padding: 5px;
+}
+#main_content {
+	margin-left: 13vw;
+	#header {
+		position: fixed;
+			width: 90vw;
+	}
 }
 
 

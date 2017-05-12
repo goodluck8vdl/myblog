@@ -1,13 +1,5 @@
 <div class="row">
     <div class="col-md-6 col-xs-12">
-        <% @post.each do |post| %>
-	        <div class="post_wrapper">
-                <h2 class="title"><%= link_to post.title, post %></h2> <br>
-                <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p> 
-            </div>
-        <% end %>
-    </div> <!-- end col -->
-    <div class="col-md-6 col-xs-12">
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
               <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -44,4 +36,13 @@
             </a>
         </div> <!--carousel-example-generic-->
     </div> <!-- end col -->
+    <div class="col-md-6 col-xs-12">
+        <% @post.each do |post| %>
+	        <div class="post_wrapper">
+                <h2 class="title"><%= link_to post.title, post %></h2> <br>
+                <p class="date" ><%= post.created_at.strftime("%B %d, %Y") %></p> 
+            </div>
+        <% end %>
+    </div> <!-- end col -->
+    
 </div> <!-- end row -->
