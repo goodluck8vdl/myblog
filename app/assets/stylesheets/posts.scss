@@ -294,3 +294,53 @@ h2 {
     margin-left: -2.2%;
     margin-right: -2.2%;
 }
+
+@media (max-width: 768px) {
+	#sidebar {
+		padding: 3.7em 0 0 0;
+		line-height: 1;
+	}
+	#carousel-example-generic {
+	margin-top: 3%;
+	width: 70vw;
+    margin-left: 10%;
+    width: 10vw;
+	}
+}
+@media (max-width: 414px) {
+		#sidebar {
+		padding: 2.2em 0 0 0;
+		line-height: 0.5;
+	
+	}
+	body {
+		line-height: 0.6;
+	}
+	#carousel-example-generic {
+	margin-top: 3%;
+	width: 70vw;
+    margin-left: 10%;
+	}
+		p {
+			line-height: 1.5;
+		}
+		.paper {
+  
+  padding: 5px;
+}
+
+
+/* Second sheet of paper */
+.paper::before {
+  left: 1px;
+  top: 1px;
+  z-index: -1;
+}
+
+/* Third sheet of paper */
+.paper::after {
+  left: 1px;
+  top: 1px;
+  z-index: -1;
+}
+}
