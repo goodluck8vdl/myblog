@@ -9,17 +9,18 @@
       </p>
     
       <div class="paper">
+        <div class="col-xs-12 col-md-6"> 
+    <p>
+      <%= image_tag(@post.image_url, class: "img-responsive") %>
+    </p>
+    </div>
         <div class="row">
           <div class="col-xs-12 col-md-6">
         <p>
           <%= @post.body %>
         </p> <br>
         </div>
-       <div class="col-xs-12 col-md-6"> 
-    <p>
-      <%= image_tag(@post.image_url, class: "img-responsive") %>
-    </p>
-    </div>
+       
   </div>
   </div> <!-- end row -->
     <br>

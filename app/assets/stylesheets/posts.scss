@@ -109,6 +109,7 @@ h4 {
 .footer {
   color: grey;
   text-align: center;
+  
   background-color: #f5f7f9;
   padding-top: 0.5vw;
   border-top: 1px solid #d6dce0;
@@ -149,7 +150,7 @@ h4 {
 		
 	}
 	#post_content {
-		padding: 1em 3em;
+		padding: 4vw;
 		.title {
 			font-weight: 500;
 			text-decoration: none;
@@ -307,16 +308,40 @@ h2 {
 	h2 {
 		text-align: center;
 	}
+	.edit_form {
+		width: 75vw;
+	}
 	.date {
 		text-align: center;
 	}
+	label{
+			font-size: 2.5vw;
+		}
+	#main_content #post_content #comments h3 {
+    margin-top: 2em;
+    text-align: center;
+    font-size: 3vw;
+    font-weight: 600;
+}
 }
 @media (max-width: 414px) {
-		#sidebar {
+	#sidebar {
 		padding: 2.2em 0 0 0;
 		line-height: 0.5;
-	
 	}
+	footer {
+			font-size: 2.5vw;
+	}
+	label{
+		font-size: 3vw;
+	}
+	#main_content #post_content #comments h3 {
+	    margin-top: 2em;
+	    text-align: center;
+	    font-size: 3.5vw;
+	    font-weight: 600;
+	}
+	
 	h2 {
 		text-align: center;
 	}
@@ -335,29 +360,38 @@ h2 {
 			line-height: 1.5;
 		}
 		.paper {
-  
   padding: 5px;
-}
+	}
 #main_content {
 	margin-left: 13vw;
 	#header {
 		position: fixed;
-			width: 90vw;
+		width: 90vw;
 	}
 }
+.edit_form {
+	width: 80vw;
+}
+.paper,
+.paper::before,
+.paper::after {
+  /* Add shadow to distinguish sheets from one another */
+  box-shadow: 2px 0 0 white;
+}
+
 
 
 /* Second sheet of paper */
 .paper::before {
-  left: 1px;
-  top: 1px;
-  z-index: -1;
+  left: 0px;
+  top: 0px;
+ 
 }
 
 /* Third sheet of paper */
 .paper::after {
-  left: 1px;
-  top: 1px;
-  z-index: -1;
+  left: 0px;
+  top: 0px;
+  
 }
 }
